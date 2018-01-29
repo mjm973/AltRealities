@@ -1,0 +1,8 @@
+Packages
+GoogleVR*
+PostProcessing*
+Library
+UnityPackageManager
+.vs
+*.csproj
+*.sln
