@@ -3,6 +3,7 @@ GoogleVR*
 PostProcessing*
 Library
 UnityPackageManager
+Temp
 .vs
 *.csproj
 *.sln

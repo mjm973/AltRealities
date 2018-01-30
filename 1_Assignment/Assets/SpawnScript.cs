@@ -52,7 +52,7 @@ public class SpawnScript : MonoBehaviour {
     float timer = 0;
 
     // Use this for initialization
-    void Start() {
+    void Start() {  
         grid = new Deck<Vector3>();
 
         Vector3 cur;
