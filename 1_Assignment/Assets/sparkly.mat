@@ -29,7 +29,7 @@ Material:
     m_Floats:
     - _Glossiness: 0.427
     - _Intensity: 50
-    - _Metallic: 0.412
+    - _Metallic: 0.43
     - _Scale: 0.07
     m_Colors:
     - _Color: {r: 0.62155175, g: 0, b: 0.75735295, a: 1}
