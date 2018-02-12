@@ -5,11 +5,11 @@ using UnityEngine;
 public class FadeBehavior : MonoBehaviour {
 
     Material mat;
-    float fade;
+    protected float fade;
 
     public float fadeSpeed = 1;
     public float resetSpeed = 0.1f;
-    bool bReset = false;
+    protected bool bReset = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +17,8 @@ public class FadeBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        mat.SetFloat("_Fade", fade);
+	protected virtual void Update () {
+        Fade();
 
         if (bReset) {
             fade = Mathf.Lerp(fade, 0, resetSpeed);
@@ -36,5 +36,9 @@ public class FadeBehavior : MonoBehaviour {
 
     public void Reset() {
         bReset = true;
+    }
+
+    protected virtual void Fade() {
+        mat.SetFloat("_Fade", fade);
     }
 }

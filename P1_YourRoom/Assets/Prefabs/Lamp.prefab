@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4892558877608938}
   - component: {fileID: 33648131946901782}
-  - component: {fileID: 135656024136934016}
   - component: {fileID: 23423019548507750}
   m_Layer: 0
   m_Name: Lightbulb
@@ -37,9 +36,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4935188501812778}
+  - component: {fileID: 135126491691776766}
+  - component: {fileID: 114188140987075674}
   m_Layer: 0
   m_Name: Lamp
-  m_TagString: Untagged
+  m_TagString: Fadeable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,8 +123,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368782676613158}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99481267, w: 0.10172474}
-  m_LocalPosition: {x: -2.2522612, y: 0.05, z: 1.927139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4892558877608938}
@@ -131,7 +132,7 @@ Transform:
   - {fileID: 4513438055595890}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -168.32301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23041948462125012
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -224,8 +225,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 5
+  m_Intensity: 6
+  m_Range: 7
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -250,15 +251,31 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!135 &135656024136934016
+--- !u!114 &114188140987075674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368782676613158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4165f71d941fe1c42ba3c6572487460f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 0.01
+  resetSpeed: 0.1
+  endColor: {r: 0.7647059, g: 0.1630623, b: 0.1630623, a: 0.528}
+  flickerChance: 0.507
+  period: 1
+--- !u!135 &135126491691776766
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1113433401245982}
+  m_GameObject: {fileID: 1368782676613158}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.14
   m_Center: {x: 0, y: 0, z: 0}

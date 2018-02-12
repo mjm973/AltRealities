@@ -25,9 +25,14 @@ public class GazeInput : MonoBehaviour {
 
             if (other.CompareTag("Fadeable")) {
                 FadeBehavior fb = other.GetComponent<FadeBehavior>();
+
+                if (!fb) {
+                    fb = other.GetComponentInChildren<FadeBehavior>();
+                }
+
                 if (fb) {
                     fb.Reset();
-                }
+                } 
             }
             else {
                // omr.material.color = Color.red;
